@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Danfo&family=Exile&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lilita+One&family=Lobster&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Share+Tech&family=WDXL+Lubrifont+TC&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "WDXL Lubrifont TC", sans-serif;
+}
+
+html{
+    color: white;
+}
+
+a{
+    text-decoration: none;
+        color: white;
+}
+
+.hero{
+    background: url("../imgs/foto3.JPG") center center;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    gap: 1rem;
+    opacity: .8;
+
+}
+
+.content-title{
+    margin-top: 2rem;
+    font-size: 5rem;
+
+}
+
+.content-link{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap:3rem;
+    font-size: 2.5rem;
+    text-align: center;
+    
+  
+}
+
+.content-link a{
+    transform: scale(1);
+    transition: all .3s ease-in-out ;
+    background-color: none;
+}
+
+.content-link a:hover{
+    transform: scale(1.01);
+    color: #ddd;
+
+}
+
+@media (min-width: 576px){
+
+    .content-link{
+        flex-direction: row;
+    }
+}
