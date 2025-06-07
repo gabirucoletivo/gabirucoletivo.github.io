@@ -48,14 +48,14 @@ a{
 }
 
 .item-1{
-background: url("../imgs/foto1.JPG") center center;
+background: url("../imgs/foto1.JPG")  ;
 background-size: cover;
 background-position: center;
 
 }
 
 .item-2{
-   background: url("../imgs/foto2.JPG") center center;
+   background: url("../imgs/foto2.JPG")  ;
 
    background-size: cover;
    background-position: center;
@@ -63,14 +63,14 @@ background-position: center;
 }
 
 .item-3{
-   background: url("../imgs/foto5.JPG") center center;
+   background: url("../imgs/foto5.JPG")  ;
    background-size: cover;
    background-position: center;     
    
 }
 
 .item-4{
-    background: url("../imgs/foto4.JPG") center center;
+    background: url("../imgs/foto4.JPG")  center;
     background-size: cover;
     background-position: center;
     
