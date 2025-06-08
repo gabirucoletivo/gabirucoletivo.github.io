@@ -1,164 +1,139 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Danfo&family=Exile&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lilita+One&family=Lobster&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Share+Tech&family=WDXL+Lubrifont+TC&display=swap');
-
-
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: "WDXL Lubrifont TC", sans-serif;
 }
 
-a{
+a {
     color: #fff;
     text-decoration: none;
 }
 
-.container{
+.container {
     padding: .5rem;
     text-align: center;
-
 }
 
-.container-menu{
+.container-menu {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
 }
 
-.item{
-  height:30vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 9px;
-
+.item {
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
 }
 
-.category-body{ 
+.category-body {
     opacity: .9;
     text-decoration: none;
     font-size: 1.5rem;
     transition: all .3s ease-in-out;
-
 }
 
-.category-body:hover{
+.category-body:hover {
     opacity: 1;
     transform: scale(1.03);
 }
 
-.item-1{
-background: url("../imgs/foto1.JPG")  ;
-background-size: cover;
-background-position: center;
-
-}
-
-.item-2{
-   background: url("../imgs/foto2.JPG")  ;
-
-   background-size: cover;
-   background-position: center;
-   
-}
-
-.item-3{
-   background: url("../imgs/foto5.JPG")  ;
-   background-size: cover;
-   background-position: center;     
-   
-}
-
-.item-4{
-    background: url("../imgs/foto4.JPG")  center;
+.item-1 {
+    background: url("../imgs/foto1.JPG");
     background-size: cover;
     background-position: center;
-    
 }
 
-footer{
+.item-2 {
+    background: url("../imgs/foto2.JPG");
+    background-size: cover;
+    background-position: center;
+}
+
+.item-3 {
+    background: url("../imgs/foto5.JPG");
+    background-size: cover;
+    background-position: center;
+}
+
+.item-4 {
+    background: url("../imgs/foto4.JPG") center;
+    background-size: cover;
+    background-position: center;
+}
+
+footer {
     font-size: .8rem;
-    
     letter-spacing: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding:1rem;
+    padding: 1rem;
 }
 
-footer a{
+footer a {
     color: #333;
     text-decoration: none;
     opacity: .3;
-    transition: all .3s ease-in-out; 
+    transition: all .3s ease-in-out;
 }
 
-footer a:hover{
+footer a:hover {
     color: #333;
     text-decoration: none;
     opacity: 1;
 }
 
-@media (min-width:576px){
-    .container-menu{
+@media (min-width:576px) {
+    .container-menu {
         grid-template-columns: repeat(2, 1fr);
-        margin-top:15%;
+        margin-top: 15%;
         row-gap: 2rem;
         column-gap: 2rem;
     }
-
-         .category-body{ 
-    font-size: 2rem;
+    .category-body {
+        font-size: 2rem;
+    }
 }
 
-        
-}
-
-@media (min-width:767px){
-    .container-menu{
+@media (min-width:767px) {
+    .container-menu {
         grid-template-columns: repeat(2, 1fr);
-        margin-top:10%;
+        margin-top: 10%;
         row-gap: 2rem;
         column-gap: 2rem;
     }
-
-   .item{
-    height:35vh;
- }
-
-     .category-body{ 
-    font-size: 2.5rem;
+    .item {
+        height: 35vh;
+    }
+    .category-body {
+        font-size: 2.5rem;
+    }
 }
 
-        
-}
-
-@media (min-width:992px){
-    .container-menu{
+@media (min-width:992px) {
+    .container-menu {
         grid-template-columns: repeat(2, 1fr);
-         margin-top: 2%;
+        margin-top: 2%;
         row-gap: 2rem;
         column-gap: 2rem;
     }
-
-     .item{
-    height:42vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
- }
-
-        
+    .item {
+        height: 42vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
-
-@media (min-width:1200px){
-    .container-menu{
+@media (min-width:1200px) {
+    .container-menu {
         grid-template-columns: repeat(2, 1fr);
         row-gap: 2rem;
         column-gap: 2rem;
     }
-
-
-        
 }
