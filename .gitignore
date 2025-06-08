@@ -1,0 +1,158 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+.venv*
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+venv/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+=2.7.0
+# Translations
+*.mo
+*.pot
+fine_tuning_Gemma_3_V2.ipynb
+test_data_202505202051.jsonl
+training_data_202505201550.jsonl
+*.whl
+# Django stuff:
+*.log
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# DotEnv configuration
+.env
+
+# Database
+*.db
+*.rdb
+
+# Pycharm
+.idea
+
+# VS Code
+.vscode/
+
+# Spyder
+.spyproject/
+
+# Jupyter NB Checkpoints
+.ipynb_checkpoints/
+
+# Mac OS-specific storage files
+.DS_Store
+
+# vim
+*.swp
+*.swo
+
+# Mypy cache
+.mypy_cache/
+
+*.sh
+*.parquet
+
+# pytest cache
+.pytest_cache/
+
+# Linting cache
+.ruff_cache/
+
+# Python cache
+**/__pycache__
+
+# Hydra logs
+outputs/
+multirun/
+
+# Documentation
+docs/coral_models/
+docs/coral_models.html
+docs/index.html
+docs/search.json
+
+# Data
+data/
+
+# Models
+models/
+
+# Experiment tracking
+wandb/
+mlruns/
+
+mlruns/
+
+# Data files
+*.xlsx
+recordings/
+conversations/
+CoRal_public.db
+
+# Todo document
+todo.md
+
+# bundle stuff
+.databricks
+bundles/
+*.lock
+.databrickscfg
+
+# artifacts
+*.csv
+*.parquet
+*.wav
+*.m4a 
+*.webm
+*.arrow
+*.zip
+*.tar
+
+# audio
+*.mp3
+*.wav
+*.webm
+*.mp4
+
+venv
