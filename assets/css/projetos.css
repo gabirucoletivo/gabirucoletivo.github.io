@@ -17,6 +17,28 @@ h1 {
     padding: 1rem;
 }
 
+footer {
+    font-size: .8rem;
+    letter-spacing: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+footer a {
+    color: #333;
+    text-decoration: none;
+    opacity: .3;
+    transition: all .3s ease-in-out;
+}
+
+footer a:hover {
+    color: #333;
+    text-decoration: none;
+    opacity: 1;
+}
+
 nav {
     background-color: #f1f1f1;
 }
