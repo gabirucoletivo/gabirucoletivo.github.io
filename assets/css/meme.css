@@ -75,6 +75,23 @@ img {
     margin: 0 3rem;
 }
 
+.stylish {
+    letter-spacing: 5px;
+    padding: 0 .5rem;
+}
+
+.cita {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.wow {
+    font-size: 5rem;
+    padding-top: 1.5rem;
+}
+
 .container-galeria {
     padding: 2rem;
 }
