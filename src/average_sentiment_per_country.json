@@ -1,0 +1,16 @@
+{
+  "metadata": {
+    "generated_at": "2025-06-08T22:19:49.140626",
+    "source_file": "most_viewed_articles_24h.json",
+    "calculation_method": "arithmetic_mean",
+    "sentiment_scale": "Typically ranges from -1 (negative) to +1 (positive)",
+    "total_countries": 5
+  },
+  "average_sentiment_by_country": {
+    "United States": -0.1106,
+    "United Kingdom": -0.1663,
+    "Ireland": -0.0965,
+    "New Zealand": -0.0918,
+    "India": 0.0227
+  }
+}
