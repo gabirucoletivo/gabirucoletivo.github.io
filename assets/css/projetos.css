@@ -7,7 +7,7 @@
 }
 
 a {
-    color: #ddd;
+    color: #333;
     text-decoration: none;
 }
 
@@ -67,6 +67,11 @@ nav {
     height: 25vh;
     font-size: 2rem;
     border-radius: 9px;
+}
+
+.project-item a {
+    color: #ddd;
+    text-decoration: none;
 }
 
 .project-1 {

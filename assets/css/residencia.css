@@ -6,6 +6,11 @@
     font-family: "WDXL Lubrifont TC", sans-serif;
 }
 
+a {
+    color: #333;
+    text-decoration: none;
+}
+
 h1 {
     text-align: center;
     padding: 1rem;
