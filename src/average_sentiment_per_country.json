@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2025-06-08T22:19:49.140626",
+    "generated_at": "2025-06-08T22:33:23.725565",
     "source_file": "most_viewed_articles_24h.json",
     "calculation_method": "arithmetic_mean",
     "sentiment_scale": "Typically ranges from -1 (negative) to +1 (positive)",

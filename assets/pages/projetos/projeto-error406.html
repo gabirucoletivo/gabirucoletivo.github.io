@@ -1,13 +1,545 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa</title>
+    <title>Global News Sentiment Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #000;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .values-overlay {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            pointer-events: none;
+        }
+        
+        .country-value {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            border: 2px solid;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        
+        .country-value.positive {
+            border-color: #22c55e;
+            background: rgba(34, 197, 94, 0.2);
+        }
+        
+        .country-value.negative {
+            border-color: #ef4444;
+            background: rgba(239, 68, 68, 0.2);
+        }
+        
+        .country-value.neutral {
+            border-color: #6b7280;
+            background: rgba(107, 114, 128, 0.2);
+        }
+        
+        #map {
+            width: 100vw;
+            height: 100vh;
+        }
+        
+        .leaflet-popup-content-wrapper {
+            background: rgba(0, 0, 0, 0.95);
+            border-radius: 8px;
+            border: 1px solid #333;
+            max-width: 400px;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+        
+        .leaflet-popup-content {
+            color: white;
+            margin: 15px;
+            font-size: 13px;
+        }
+        
+        .leaflet-popup-tip {
+            background: rgba(0, 0, 0, 0.95);
+            border: 1px solid #333;
+        }
+        
+        .popup-header {
+            text-align: center;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+        
+        .popup-header h3 {
+            margin: 0 0 5px 0;
+            color: white;
+            font-size: 1.1rem;
+        }
+        
+        .popup-sentiment {
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .popup-label {
+            font-size: 0.85rem;
+            color: #ccc;
+        }
+        
+        .articles-section {
+            margin-top: 15px;
+        }
+        
+        .articles-title {
+            color: #ccc;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #444;
+            padding-bottom: 5px;
+        }
+        
+        .article-item {
+            margin-bottom: 12px;
+            padding: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 6px;
+            border-left: 3px solid;
+        }
+        
+        .article-item.positive {
+            border-left-color: #22c55e;
+        }
+        
+        .article-item.negative {
+            border-left-color: #ef4444;
+        }
+        
+        .article-item.neutral {
+            border-left-color: #6b7280;
+        }
+        
+        .article-title {
+            font-weight: 600;
+            font-size: 0.85rem;
+            line-height: 1.3;
+            margin-bottom: 4px;
+            color: white;
+        }
+        
+        .article-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.75rem;
+            color: #aaa;
+        }
+        
+        .article-source {
+            font-weight: 500;
+        }
+        
+        .article-sentiment {
+            font-weight: 600;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-size: 0.7rem;
+        }
+        
+        .article-sentiment.positive {
+            background: rgba(34, 197, 94, 0.3);
+            color: #22c55e;
+        }
+        
+        .article-sentiment.negative {
+            background: rgba(239, 68, 68, 0.3);
+            color: #ef4444;
+        }
+        
+        .article-sentiment.neutral {
+            background: rgba(107, 114, 128, 0.3);
+            color: #6b7280;
+        }
+        
+        .positive {
+            color: #22c55e;
+        }
+        
+        .negative {
+            color: #ef4444;
+        }
+        
+        .neutral {
+            color: #6b7280;
+        }
+        
+        .loading-screen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            font-size: 18px;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .loading-text {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .loading-details {
+            font-size: 14px;
+            opacity: 0.7;
+            text-align: center;
+        }
+        
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            border-top: 3px solid #22c55e;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .values-overlay {
+                top: 10px;
+                left: 10px;
+                right: 10px;
+                gap: 8px;
+            }
+            .country-value {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    
-    <!-- Aquí coloca lo que quieras, como quieras -->
-     <h1>MAPA</h1>
+    <!-- Values overlay on top of map -->
+    <div class="values-overlay" id="valuesOverlay"></div>
+
+    <!-- Full screen map -->
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js" onerror="console.log('Secondary CDN failed')" onload="if(typeof L !== 'undefined') { console.log('Leaflet loaded from secondary CDN'); }"></script>
+
+    <script>
+        // Will be loaded dynamically from JSON files
+        let sentimentData = {};
+        let articlesData = {};
+
+        // Country coordinates
+        const countryCoordinates = {
+            "United States": {
+                lat: 39.8283,
+                lng: -98.5795
+            },
+            "United Kingdom": {
+                lat: 55.3781,
+                lng: -3.4360
+            },
+            "Ireland": {
+                lat: 53.1424,
+                lng: -7.6921
+            },
+            "New Zealand": {
+                lat: -40.9006,
+                lng: 174.8860
+            },
+            "India": {
+                lat: 20.5937,
+                lng: 78.9629
+            }
+        };
+
+        // Load data from JSON files
+        async function loadData() {
+            try {
+                console.log('🔄 Loading sentiment data...');
+                const sentimentResponse = await fetch('../src/average_sentiment_per_country.json');
+                if (sentimentResponse.ok) {
+                    const sentimentJson = await sentimentResponse.json();
+                    sentimentData = sentimentJson.average_sentiment_by_country || {};
+                    console.log('✅ Sentiment data loaded:', Object.keys(sentimentData).length, 'countries');
+                } else {
+                    throw new Error(`Failed to load sentiment data: ${sentimentResponse.status}`);
+                }
+
+                console.log('🔄 Loading articles data...');
+                const articlesResponse = await fetch('../src/most_viewed_articles_24h.json');
+                if (articlesResponse.ok) {
+                    const articlesJson = await articlesResponse.json();
+                    articlesData = articlesJson.articles_by_country || {};
+                    console.log('✅ Articles data loaded:', Object.keys(articlesData).length, 'countries');
+                } else {
+                    throw new Error(`Failed to load articles data: ${articlesResponse.status}`);
+                }
+
+                return true;
+            } catch (error) {
+                console.error('❌ Error loading data:', error);
+
+                // Fallback data if files don't exist
+                console.log('⚠️ Using fallback data...');
+                sentimentData = {
+                    "United States": -0.1075,
+                    "United Kingdom": 0.0369,
+                    "Ireland": 0.0933,
+                    "New Zealand": -0.0996,
+                    "India": 0.0635
+                };
+
+                articlesData = {
+                    "United States": [{
+                        title: "Sample Article (Fallback Data)",
+                        source: "Sample Source",
+                        sentiment: -0.1
+                    }]
+                };
+
+                return false;
+            }
+        }
+
+        class SentimentMap {
+            constructor() {
+                this.map = null;
+                this.init();
+            }
+
+            init() {
+                this.createValuesOverlay();
+                this.initMap();
+                setTimeout(() => {
+                    this.addMarkers();
+                }, 300);
+            }
+
+            createValuesOverlay() {
+                const container = document.getElementById('valuesOverlay');
+                container.innerHTML = ''; // Clear existing content
+
+                Object.entries(sentimentData).forEach(([country, sentiment]) => {
+                    const valueDiv = document.createElement('div');
+                    const label = sentiment > 0.01 ? 'positive' : sentiment < -0.01 ? 'negative' : 'neutral';
+
+                    valueDiv.className = `country-value ${label}`;
+                    valueDiv.innerHTML = `${country}: ${sentiment.toFixed(4)}`;
+
+                    container.appendChild(valueDiv);
+                });
+            }
+
+            initMap() {
+                setTimeout(() => {
+                    try {
+                        this.map = L.map('map', {
+                            center: [20, 0],
+                            zoom: 2,
+                            zoomControl: true,
+                            attributionControl: false
+                        });
+
+                        // Dark tile layer
+                        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+                            attribution: '© CartoDB',
+                            maxZoom: 18
+                        }).addTo(this.map);
+
+                        setTimeout(() => {
+                            this.map.invalidateSize();
+                        }, 100);
+
+                        console.log('🗺️ Map initialized successfully');
+                    } catch (error) {
+                        console.error('❌ Error initializing map:', error);
+                    }
+                }, 100);
+            }
+
+            getSentimentColor(value) {
+                if (value > 0.01) return '#22c55e';
+                if (value < -0.01) return '#ef4444';
+                return '#6b7280';
+            }
+
+            getSentimentLabel(value) {
+                if (value > 0.01) return "Positive";
+                if (value < -0.01) return "Negative";
+                return "Neutral";
+            }
+
+            addMarkers() {
+                    if (!this.map) return;
+
+                    Object.entries(sentimentData).forEach(([country, sentiment]) => {
+                                const coords = countryCoordinates[country];
+                                if (!coords) return;
+
+                                const color = this.getSentimentColor(sentiment);
+                                const label = this.getSentimentLabel(sentiment);
+
+                                const marker = L.circleMarker([coords.lat, coords.lng], {
+                                    radius: 15,
+                                    fillColor: color,
+                                    color: '#fff',
+                                    weight: 3,
+                                    opacity: 1,
+                                    fillOpacity: 0.9
+                                });
+
+                                // Create detailed popup with articles
+                                const articles = articlesData[country] || [];
+                                let articlesHtml = '';
+
+                                if (articles.length > 0) {
+                                    articlesHtml = `
+                            <div class="articles-section">
+                                <div class="articles-title">📰 Recent Articles (${articles.length})</div>
+                                ${articles.map(article => {
+                                    const articleLabel = article.sentiment > 0.01 ? 'positive' : 
+                                                       article.sentiment < -0.01 ? 'negative' : 'neutral';
+                                    return `
+                                        <div class="article-item ${articleLabel}">
+                                            <div class="article-title">${article.title}</div>
+                                            <div class="article-meta">
+                                                <span class="article-source">${article.source}</span>
+                                                <span class="article-sentiment ${articleLabel}">
+                                                    ${article.sentiment.toFixed(3)}
+                                                </span>
+                                            </div>
+                                        </div>
+                                    `;
+                                }).join('')}
+                            </div>
+                        `;
+                    }
+
+                    const popupContent = `
+                        <div class="popup-header">
+                            <h3>${country}</h3>
+                            <div class="popup-sentiment ${label.toLowerCase()}">${sentiment.toFixed(4)}</div>
+                            <div class="popup-label">${label} Sentiment</div>
+                        </div>
+                        ${articlesHtml}
+                    `;
+
+                    marker.bindPopup(popupContent, {
+                        closeButton: true,
+                        autoClose: false,
+                        maxWidth: 400,
+                        maxHeight: 500
+                    });
+
+                    marker.on('mouseover', function(e) {
+                        e.target.setRadius(20);
+                        e.target.setStyle({ weight: 4 });
+                    });
+
+                    marker.on('mouseout', function(e) {
+                        e.target.setRadius(15);
+                        e.target.setStyle({ weight: 3 });
+                    });
+
+                    marker.addTo(this.map);
+                });
+
+                console.log('📍 Markers added successfully');
+            }
+        }
+
+        // Initialize when DOM is ready
+        document.addEventListener('DOMContentLoaded', async () => {
+            console.log('🌍 Starting Global News Sentiment Map...');
+            
+            // Show loading screen
+            document.getElementById('map').innerHTML = `
+                <div class="loading-screen">
+                    <div class="loading-spinner"></div>
+                    <div class="loading-text">🔄 Loading Data</div>
+                    <div class="loading-details">
+                        Fetching sentiment data and articles...<br>
+                        <strong>average_sentiment_per_country.json</strong><br>
+                        <strong>most_viewed_articles_24h.json</strong>
+                    </div>
+                </div>
+            `;
+
+            // Load data first
+            const dataLoaded = await loadData();
+            
+            if (dataLoaded) {
+                console.log('✅ All data loaded successfully, initializing map...');
+            } else {
+                console.log('⚠️ Using fallback data');
+            }
+
+            // Wait for Leaflet to be ready
+            setTimeout(() => {
+                if (typeof L !== 'undefined') {
+                    // Clear loading screen
+                    document.getElementById('map').innerHTML = '';
+                    new SentimentMap();
+                    console.log('🎉 Sentiment map initialized successfully!');
+                } else {
+                    document.getElementById('map').innerHTML = `
+                        <div class="loading-screen">
+                            <div style="color: #ef4444; font-size: 24px;">❌</div>
+                            <div class="loading-text">Map Library Failed</div>
+                            <div class="loading-details">
+                                Leaflet library failed to load.<br>
+                                Please refresh the page.
+                            </div>
+                        </div>
+                    `;
+                }
+            }, 1000);
+        });
+
+        // Handle resize
+        window.addEventListener('resize', () => {
+            if (window.map) {
+                setTimeout(() => window.map.invalidateSize(), 100);
+            }
+        });
+    </script>
 </body>
+
 </html>

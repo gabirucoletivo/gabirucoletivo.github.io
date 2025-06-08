@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2025-06-08T22:19:49.138700",
+    "generated_at": "2025-06-08T22:33:23.723587",
     "time_period": "Last 24 hours",
     "total_countries": 5,
     "total_articles": 25
@@ -206,18 +206,6 @@
         "body": "Internet experts say the government must do more to avoid internet outages, after a warship knocked out services to Taranaki and Marlborough.\n\nInterference from an Australian warship's navigation rada..."
       },
       {
-        "title": "Wrong-way Auckland motorway driver Kingi Karanga turns to Appeal Court to quash convictions",
-        "url": "https://www.rnz.co.nz/news/national/563447/wrong-way-auckland-motorway-driver-kingi-karanga-turns-to-appeal-court-to-quash-convictions",
-        "source": "RNZ",
-        "date": "2025-06-08",
-        "dateTime": "2025-06-08T01:24:54Z",
-        "socialScore": 0,
-        "sentiment": -0.6313725490196078,
-        "country": "New Zealand",
-        "lang": "eng",
-        "body": "A judge was \"literally holding my breath for other motorists\" when he saw video footage of Kingi Karanga driving at speed the wrong way down two motorways - bringing \"extreme danger to countless peopl..."
-      },
-      {
         "title": "Government announces new 'Parent Boost' visa to bring families together",
         "url": "https://www.rnz.co.nz/news/political/563450/government-announces-new-parent-boost-visa-to-bring-families-together",
         "source": "RNZ",
@@ -228,6 +216,18 @@
         "country": "New Zealand",
         "lang": "eng",
         "body": "Parents of New Zealand citizens and residents will be able to access visas, with the government announcing a programme it says will bring families together.\n\nFrom September, parents will be able to ac..."
+      },
+      {
+        "title": "Wrong-way Auckland motorway driver Kingi Karanga turns to Appeal Court to quash convictions",
+        "url": "https://www.rnz.co.nz/news/national/563447/wrong-way-auckland-motorway-driver-kingi-karanga-turns-to-appeal-court-to-quash-convictions",
+        "source": "RNZ",
+        "date": "2025-06-08",
+        "dateTime": "2025-06-08T01:24:54Z",
+        "socialScore": 0,
+        "sentiment": -0.6313725490196078,
+        "country": "New Zealand",
+        "lang": "eng",
+        "body": "A judge was \"literally holding my breath for other motorists\" when he saw video footage of Kingi Karanga driving at speed the wrong way down two motorways - bringing \"extreme danger to countless peopl..."
       },
       {
         "title": "Mistakenly deported man Abrego Garcia returns to US to face migrant transport charges",
@@ -256,16 +256,16 @@
     ],
     "India": [
       {
-        "title": "Video | US China Trade Talks | US, China To Hold Trade Talks In London Tomorrow, Trump Says \"Should Go Well\"",
-        "url": "https://www.ndtv.com/videos/us-china-trade-talks-us-china-to-hold-trade-talks-in-london-tomorrow-trump-says-should-go-well-949358",
+        "title": "Video | Starlink In India | Starlink Plans Yet To Be Out In India, A Look At Pricing In Other Nations",
+        "url": "https://www.ndtv.com/videos/starlink-in-india-starlink-plans-yet-to-be-out-in-india-a-look-at-pricing-in-other-nations-949419",
         "source": "NDTV",
         "date": "2025-06-07",
-        "dateTime": "2025-06-07T05:50:43Z",
+        "dateTime": "2025-06-07T09:25:21Z",
         "socialScore": 0,
-        "sentiment": -0.1058823529411764,
+        "sentiment": 0.1215686274509804,
         "country": "India",
         "lang": "eng",
-        "body": "\"Should Go Well\" Three of President Donald Trump's top aides will face their Chinese counterparts in London on Monday for talks to resolve a trade dispute between the world's two largest economies tha..."
+        "body": "Elon Musk's satellite communication company Starlink has received the licence from the Department of Telecommunications (DoT), a key milestone that will take it closer towards launching commercial ope..."
       },
       {
         "title": "Video | India's Rs 5 Parle-G Biscuit Becomes Luxury In Gaza, Packs Sold For Rs 2,400",
@@ -280,16 +280,16 @@
         "body": "Parle-G biscuits, a staple in Indian households, associated with childhood, tea breaks, and low-cost nutrition, were never intended to be a luxury. But in wartorn Gaza, where food scarcity has turned ..."
       },
       {
-        "title": "Video | Starlink In India | Starlink Plans Yet To Be Out In India, A Look At Pricing In Other Nations",
-        "url": "https://www.ndtv.com/videos/starlink-in-india-starlink-plans-yet-to-be-out-in-india-a-look-at-pricing-in-other-nations-949419",
+        "title": "Video | US China Trade Talks | US, China To Hold Trade Talks In London Tomorrow, Trump Says \"Should Go Well\"",
+        "url": "https://www.ndtv.com/videos/us-china-trade-talks-us-china-to-hold-trade-talks-in-london-tomorrow-trump-says-should-go-well-949358",
         "source": "NDTV",
         "date": "2025-06-07",
-        "dateTime": "2025-06-07T09:25:21Z",
+        "dateTime": "2025-06-07T05:50:43Z",
         "socialScore": 0,
-        "sentiment": 0.1215686274509804,
+        "sentiment": -0.1058823529411764,
         "country": "India",
         "lang": "eng",
-        "body": "Elon Musk's satellite communication company Starlink has received the licence from the Department of Telecommunications (DoT), a key milestone that will take it closer towards launching commercial ope..."
+        "body": "\"Should Go Well\" Three of President Donald Trump's top aides will face their Chinese counterparts in London on Monday for talks to resolve a trade dispute between the world's two largest economies tha..."
       },
       {
         "title": "Video | Rahul Gandhi Claims \"Match-Fixing\" In Maharashtra Polls, BJP Responds",
