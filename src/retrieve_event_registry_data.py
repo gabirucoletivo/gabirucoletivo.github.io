@@ -1,6 +1,7 @@
 import json
 import time
-from datetime import datetime, timedelta
+import datetime as dt
+from datetime import timedelta
 
 from eventregistry import *
 
@@ -31,7 +32,7 @@ def get_most_viewed_articles_by_country(country_name, max_articles=20):
         print(f"Country URI for {country_name}: {country_uri}")
 
         # Calculate date range for last 24 hours
-        end_date = datetime.now()
+        end_date = dt.datetime.now()
         start_date = end_date - timedelta(days=1)
 
         # Create query for articles from the specific country in last 24h
@@ -82,7 +83,7 @@ def get_trending_articles_alternative(country_name, max_articles=20):
             return []
 
         # Calculate date range for last 24 hours
-        end_date = datetime.now()
+        end_date = dt.datetime.now()
         start_date = end_date - timedelta(days=1)
 
         # Create query
@@ -215,7 +216,7 @@ def save_articles_to_json(
     # Add metadata
     output_data = {
         "metadata": {
-            "generated_at": datetime.now().isoformat(),
+            "generated_at": dt.datetime.now().isoformat(),
             "time_period": "Last 24 hours",
             "total_countries": len(articles_by_country),
             "total_articles": sum(
@@ -284,7 +285,7 @@ def calculate_average_sentiment_per_country(
         # Create output data with metadata
         output_data = {
             "metadata": {
-                "generated_at": datetime.now().isoformat(),
+                "generated_at": dt.datetime.now().isoformat(),
                 "source_file": input_filename,
                 "calculation_method": "arithmetic_mean",
                 "sentiment_scale": "Typically ranges from -1 (negative) to +1 (positive)",
@@ -366,10 +367,11 @@ if __name__ == "__main__":
     # List of major countries to check
     major_countries = [
         "United States",
-        "United Kingdom",
-        "Ireland",
-        "New Zealand",
-        "India",
+        "Brazil",
+        "Chile",
+        "Argentina",
+        "Colombia",
+        "Uruguay"
     ]
 
     # Example 1: Get articles from multiple countries
