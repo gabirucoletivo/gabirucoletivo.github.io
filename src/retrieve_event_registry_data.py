@@ -227,7 +227,7 @@ def save_articles_to_json(
     }
 
     with open(filename, "w", encoding="utf-8") as f:
-        json.dump(output_data, f, indent=2, ensure_ascii=False)
+        json.dump(f"./src/{output_data}", f, indent=2, ensure_ascii=False)
 
     print(f"\n💾 Results saved to {filename}")
 
@@ -296,7 +296,7 @@ def calculate_average_sentiment_per_country(
 
         # Save to JSON file
         with open(output_filename, "w", encoding="utf-8") as f:
-            json.dump(output_data, f, indent=2, ensure_ascii=False)
+            json.dump(f"./src/{output_data}", f, indent=2, ensure_ascii=False)
 
         print(f"\n💾 Average sentiment data saved to {output_filename}")
 
@@ -366,12 +366,19 @@ if __name__ == "__main__":
 
     # List of major countries to check
     major_countries = [
-        "United States",
+        "Argentina",
+        "Bolivia", 
         "Brazil",
         "Chile",
-        "Argentina",
-        "Colombia",
-        "Uruguay"
+        "Colombia", 
+        "Ecuador",
+        "French Guiana",
+        "Guyana",
+        "Paraguay",
+        "Peru",
+        "Suriname",
+        "Uruguay",
+        "Venezuela"
     ]
 
     # Example 1: Get articles from multiple countries
@@ -379,7 +386,7 @@ if __name__ == "__main__":
         f"\n🔍 Fetching most viewed articles from {len(major_countries)} countries..."
     )
     results = get_most_viewed_articles_multiple_countries(
-        major_countries[:5], articles_per_country=5
+        major_countries, articles_per_country=3
     )
 
     # Display results
