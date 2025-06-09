@@ -112,13 +112,21 @@ nav {
     background: url("../imgs/map_cover.png");
     background-position: center;
     background-size: cover;
+    filter: hue-rotate(210deg) invert(100%);
+}
+
+.project-3 a {
+text-align: center;
+color: #333;
 }
 
 .project-4 {
-    background: url("../imgs/foto8.JPG");
+    background: url("../imgs/rave/americanos_audio3.png");
     background-position: center;
     background-size: cover;
 }
+
+
 
 @media (min-width: 576px) {
     .nav-items {

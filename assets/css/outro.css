@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Danfo&family=Exile&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lilita+One&family=Lobster&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Share+Tech&family=WDXL+Lubrifont+TC&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "WDXL Lubrifont TC", sans-serif;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+h1 {
+    margin-top: 1.5rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    text-align: center;
+    padding: 1rem;
+}
+/* nav */
+nav {
+    background-color: #f1f1f1;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    gap: .5rem;
+    padding: .5rem;
+    font-size: 1rem;
+}
+
+.nav-item {
+    background-color: none;
+    border: none;
+
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+}
+
+.nav-item:hover {
+    background-color: #fff;
+    transform: scale(.95);
+}
+
+
+.container-residencia{
+    width: 100%;
+}
+/* main container */
+.container-residencia p {
+    margin: 1rem 3rem;
+}
+
+
+/* leading title information */
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.img-container img {
+    width: 80%;
+
+}
+
+/* image animation */
+
+.altered{
+    animation: color-changes 1s infinite ease-in-out;
+    animation-direction: alternate; 
+}
+
+@keyframes color-changes{
+    from{
+        filter: invert(100%) blur(5px);
+        box-shadow: none;
+    }
+
+    to{
+        filter: invert(0%) blur(20px);
+        box-shadow:  10px 10px 10px #333;
+    }
+}
+
+/* text */
+
+.legenda-imagem {
+    font-size: 1.2rem;
+}
+
+/* video gallery */
+.vid-container{
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.vid-grid {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1rem;
+}
+.vid-grid video{
+    width: 100%;
+     border-radius: 5px;
+}
+
+
+/* galeria */
+.container-galeria {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ padding: 1rem;
+ margin: 1rem;
+
+}
+
+.galeria {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.sample{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-galeria img {
+    width: 30vh;
+    height: 30vh;
+    border-radius: 50%;
+    transition: all .6s ease-in-out;
+    opacity: .6;
+    filter: grayscale(100%);
+
+}
+
+.container-galeria img:hover {
+    cursor: pointer;
+    opacity: 1;
+    border-radius: 3%;
+    filter: grayscale(0%);
+}
+
+/* footer */
+footer {
+    font-size: .8rem;
+    letter-spacing: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+footer a {
+    color: #333;
+    text-decoration: none;
+    opacity: .3;
+    transition: all .3s ease-in-out;
+}
+
+footer a:hover {
+    color: #333;
+    text-decoration: none;
+    opacity: 1;
+}
+
+@media (min-width: 576px) {
+    .nav-items {
+        font-size: 1.5rem;
+    }
+
+    .container-galeria{
+        flex-direction: row;
+    }
+
+    .img-container img {
+    width: 60%;
+    padding: 1rem;
+}
+
+    .legenda-imagem {
+        margin: 0 10%;
+        font-size: 1.5rem;
+    }
+
+
+   /* video */
+    .vid-grid {
+    grid-template-columns: repeat(2, 1fr);
+    width: 75%;
+    gap: 2rem;
+    }
+
+
+
+    .container-galeria {
+
+
+
+        .audio-station{
+        transform: scale(.8);
+    }
+
+    }
+
+}
+
+@media(min-width: 767px) {
+
+    .vid-grid {
+        width: 75%;
+}
+
+    .container-galeria .galeria img {
+        height: 30vh;
+    }
+
+
+}
+
+@media(min-width: 992px) {
+
+            .galeria {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+        .container-galeria .galeria img {
+        width: 80%;
+        height: 25vh;
+    }
+
+
+
+
+}
+
+@media(min-width: 1200px) {
+
+        .vid-grid{
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .container-galeria .galeria img {
+        width: 75%;
+        height: 40vh;
+    }
+
+
+}
