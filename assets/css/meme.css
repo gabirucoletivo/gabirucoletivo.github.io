@@ -101,13 +101,21 @@ nav {
 
 .galeria {
     display: grid;
-    row-gap: 1rem;
+    gap: 1.5rem;
     grid-template-columns: 1fr;
 }
 
 .container-galeria img {
-    width: 100%;
-    height: auto;
+    width: 70%;
+    height: 50%;
+    border-radius: 50%;
+    transition: all .5 ease-in-out;
+    object-fit: cover;
+    object-position: 25% 50%;
+}
+
+.container-galeria img:hover {
+    border-radius: 3%;
 }
 
 footer {
@@ -177,7 +185,7 @@ footer a:hover {
         transition: all 1s ease-in-out;
         object-fit: cover;
         object-position: center;
-        opacity: .4;
+        opacity: .2;
     }
     .galeria img:hover {
         height: 100%;
