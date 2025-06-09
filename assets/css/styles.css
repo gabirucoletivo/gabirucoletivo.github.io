@@ -21,6 +21,28 @@ a {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    animation: colores 5s infinite;
+    animation-direction:alternate;
+}
+
+@keyframes colores{
+
+    0%{
+      filter: saturate(0%);
+      filter: blur(0);
+    }
+
+    50%{
+        filter: saturate(100%);
+        filter: blur(2px);
+    }
+
+    100%{
+      filter: saturate(0%);
+      filter: blur(0);
+    }
+
+
 }
 
 .content {
