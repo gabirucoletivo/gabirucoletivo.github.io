@@ -574,13 +574,13 @@ def generate_embedded_map_html(sentiment_file, articles_file, output_file):
         function zoomToSouthAmericaEmbedded() {{
             // South America bounding box coordinates
             const southAmericaBounds = [
-                [-60, -90], // Southwest corner (lat, lng)
-                [15, -30]   // Northeast corner (lat, lng)
+                [-56, -82], // Southwest corner (lat, lng) - covers southern Chile/Argentina
+                [13, -34]   // Northeast corner (lat, lng) - covers northern Venezuela/Guyana
             ];
             
             // Fit map to South America bounds with padding
             sentimentMap.fitBounds(southAmericaBounds, {{
-                padding: [20, 20],
+                padding: [5, 5],
                 maxZoom: 4
             }});
         }}
