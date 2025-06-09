@@ -97,7 +97,7 @@ nav {
 }
 
 .project-1 {
-    background: url("../imgs/foto1.JPG");
+    background: url("../imgs/QR_9.JPG");
     background-position: center;
     background-size: cover;
 }
@@ -116,8 +116,8 @@ nav {
 }
 
 .project-3 a {
-text-align: center;
-color: #333;
+    text-align: center;
+    color: #333;
 }
 
 .project-4 {
@@ -125,8 +125,6 @@ color: #333;
     background-position: center;
     background-size: cover;
 }
-
-
 
 @media (min-width: 576px) {
     .nav-items {

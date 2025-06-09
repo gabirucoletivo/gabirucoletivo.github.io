@@ -1,24 +1,24 @@
 {
-  "metadata": {
-    "generated_at": "2025-06-09T13:38:13.603685",
-    "source_file": "most_viewed_articles_24h.json",
-    "calculation_method": "arithmetic_mean",
-    "sentiment_scale": "Typically ranges from -1 (negative) to +1 (positive)",
-    "total_countries": 13
-  },
-  "average_sentiment_by_country": {
-    "Argentina": 0.0,
-    "Bolivia": 0.0,
-    "Brazil": 0.0,
-    "Chile": 0.0,
-    "Colombia": 0.0,
-    "Ecuador": 0.0,
-    "French Guiana": 0.0,
-    "Guyana": 0.0745,
-    "Paraguay": 0.0,
-    "Peru": 0.0,
-    "Suriname": 0.0,
-    "Uruguay": 0.0,
-    "Venezuela": 0.0
-  }
+    "metadata": {
+        "generated_at": "2025-06-09T13:38:13.603685",
+        "source_file": "most_viewed_articles_24h.json",
+        "calculation_method": "arithmetic_mean",
+        "sentiment_scale": "Typically ranges from -1 (negative) to +1 (positive)",
+        "total_countries": 13
+    },
+    "average_sentiment_by_country": {
+        "Argentina": -0.23,
+        "Bolivia": 0.15,
+        "Brazil": -0.41,
+        "Chile": 0.67,
+        "Colombia": -0.08,
+        "Ecuador": 0.34,
+        "French Guiana": -0.52,
+        "Guyana": 0.0745,
+        "Paraguay": 0.28,
+        "Peru": -0.19,
+        "Suriname": 0.83,
+        "Uruguay": 0.45,
+        "Venezuela": -0.74
+    }
 }

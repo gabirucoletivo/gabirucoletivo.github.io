@@ -208,11 +208,14 @@ def generate_embedded_map_html(sentiment_file, articles_file, output_file):
 
         <div class="legenda-imagem">
             <p>
-                South America News Sentiment Mapping is a data visualization project that captures the emotional pulse of the continent through its news landscape. Every 24 hours, the project scans the most popular and widely-shared news articles across 13 South American countries, analyzing the sentiment and tone of what's currently dominating public attention in each nation. By examining which stories are resonating most with people - the ones being shared, discussed, and engaged with online - it creates a real-time emotional map of the continent.
+                South America News Sentiment Mapping is a data visualization project that captures the emotional pulse of the continent through its news landscape. Every 24 hours, the project scans the most popular and widely-shared news articles across 13 South American countries, analyzing the sentiment and tone of what's currently dominating public attention in each nation. By examining which stories are resonating most with people (the ones being shared, discussed, and engaged with online) it creates a real-time emotional map of the continent.
             </p>
 
             <p>
-                The interactive visualization translates this data into a living, breathing representation of South America's collective mood. Each country is colored according to the average sentiment of its trending news stories, revealing patterns of optimism, concern, or neutrality across the region. This approach offers a unique window into the social and political climate of South America, showing not just what's happening, but how these events are being received and felt by the public. Through this lens, South America News Sentiment Mapping aims to foster understanding of the diverse experiences and perspectives that shape this vibrant continent, making visible the emotional currents that flow through its media landscape.
+                The interactive visualization translates this data into a living, breathing representation of South America's collective mood nowadays. Each country is colored according to the average sentiment of its trending news stories, revealing patterns of optimism, concern, or neutrality across the region. This approach offers a unique window into the social and political climate of South America, showing not just what's happening, but how these events are being received and felt by the public. Through this lens, South America News Sentiment Mapping aims to foster understanding of the diverse experiences and perspectives that shape this vibrant continent, making visible the emotional currents that flow through its media landscape.
+            </p>
+            <p>
+                Please note that the sentiment values currently displayed on the map are placeholder data for demonstration purposes only and do not reflect actual news sentiment from South American countries. This project is currently in development, and the visualization shows dummy values to illustrate the concept and functionality of the sentiment mapping system. The final implementation will feature real-time sentiment analysis of trending news articles once the data collection and processing pipeline is fully operational.
             </p>
         </div>
 

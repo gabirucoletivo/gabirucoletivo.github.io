@@ -15,34 +15,32 @@ a {
     color: white;
 }
 
+
+/*fazer animacao glitch*/
+
 .hero {
-    background: url("../imgs/foto3.JPG") center center;
+    background: url("../imgs/foto11.JPG") center center;
     height: 100vh;
     background-position: center;
-    background-size: cover;
+    background-size: fill;
     background-attachment: fixed;
     animation: colores 5s infinite;
-    animation-direction:alternate;
+    animation-direction: alternate;
 }
 
-@keyframes colores{
-
-    0%{
-      filter: saturate(0%);
-      filter: blur(0);
+@keyframes colores {
+    0% {
+        filter: saturate(0%);
+        filter: blur(0);
     }
-
-    50%{
+    50% {
         filter: saturate(100%);
         filter: blur(2px);
     }
-
-    100%{
-      filter: saturate(0%);
-      filter: blur(0);
+    100% {
+        filter: saturate(0%);
+        filter: blur(0);
     }
-
-
 }
 
 .content {
