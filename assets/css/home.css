@@ -43,25 +43,26 @@ a {
 }
 
 .item-1 {
-    background: url("../imgs/foto1.JPG");
+    background: url("../imgs/flyer_15.JPG");
     background-size: cover;
     background-position: center;
+    filter: hue-rotate(120deg);
 }
 
 .item-2 {
-    background: url("../imgs/foto2.JPG");
+    background: url("../imgs/Expo_9.png");
     background-size: cover;
     background-position: center;
 }
 
 .item-3 {
-    background: url("../imgs/foto5.JPG");
+    background: url("../imgs/flyer_7_2.JPG");
     background-size: cover;
     background-position: center;
 }
 
 .item-4 {
-    background: url("../imgs/foto4.JPG") center;
+    background: url("../imgs/flyer_9.JPG") center;
     background-size: cover;
     background-position: center;
 }
