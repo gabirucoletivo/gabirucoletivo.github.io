@@ -227,7 +227,7 @@ def save_articles_to_json(
     }
 
     with open(filename, "w", encoding="utf-8") as f:
-        json.dump(f"./src/{output_data}", f, indent=2, ensure_ascii=False)
+        json.dump(output_data, f, indent=2, ensure_ascii=False)
 
     print(f"\n💾 Results saved to {filename}")
 
@@ -296,7 +296,7 @@ def calculate_average_sentiment_per_country(
 
         # Save to JSON file
         with open(output_filename, "w", encoding="utf-8") as f:
-            json.dump(f"./src/{output_data}", f, indent=2, ensure_ascii=False)
+            json.dump(output_data, f, indent=2, ensure_ascii=False)
 
         print(f"\n💾 Average sentiment data saved to {output_filename}")
 
