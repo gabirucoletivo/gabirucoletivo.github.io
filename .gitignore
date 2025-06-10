@@ -150,9 +150,9 @@ bundles/
 *.tar
 
 # audio
-*.mp3
+# *.mp3
 *.wav
-*.webm
+# *.webm
 *.mp4
 
 venv
