@@ -144,13 +144,13 @@ bundles/
 *.parquet
 *.wav
 *.m4a 
-*.webm
+# *.webm
 *.arrow
 *.zip
 *.tar
 
 # audio
-# *.mp3
+*.mp3
 *.wav
 # *.webm
 *.mp4
