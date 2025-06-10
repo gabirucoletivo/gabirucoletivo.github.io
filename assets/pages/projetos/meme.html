@@ -24,6 +24,21 @@
         </div>
     </nav>
 
+    <div class="modal">
+        <div class="modal-content">
+
+            <button  onclick="closeWindow()" id="modal-image-button">
+                <img class="close-button-icon" src="../../imgs/icons/close-icon.svg" alt="">
+            </button>
+
+        <img class="especial" src="../../imgs/prompts/meme_10.png" id="modal-src" alt="">
+        <p id="modal-desc"> default</p>
+    
+
+        </div>
+       
+    </div>
+
     <div>
         <h1>Global Math Confusion</h1>
         <h3>A Meme-Based Portrait Series</h3>
@@ -35,23 +50,25 @@
         </div>
 
         <div class="cita">
-            <div class="wow">"</div>
-            <div>
-                <h2>I want you to generate a meme derived from the meme of Nazaré Tedesco confused doing math. I want this new meme to have <span class="stylish">[...]</span> influence.</h2>
+           
+            <div class="cita-body">
+                 <div class="apostrophe left">"</div>
+                <h2>I want you to generate a meme derived from the meme of Nazaré Tedesco confused doing math. I want this new meme to have <span class="stylish">[ ... ]</span> influence.</h2>
+                 <div class="apostrophe right">"</div>
             </div>
-            <div class="wow">"</div>
+           
         </div>
 
         <div class="legenda-imagem">
             <p>
                 This series explores the intersection of digital culture, identity, and humor through the reimagination of the viral "Nazaré Tedesco Confused Math" meme. Each image is generated as a fusion of cognitive dissonance and national archetypes, depicting individuals
-                from various countries caught in moments of abstract contemplation, overwhelmed by floating mathematical equations. The emotional core (confusion, tension, and internal calculation) is maintained across all variations, while the visual
-                context shifts to reflect culturally specific aesthetics.
+                from various countries caught in moments of abstract contemplation, overwhelmed by floating mathematical equations. The emotional core—confusion, tension, and internal calculation—is maintained across all variations, while the visual context
+                shifts to reflect culturally specific aesthetics.
             </p>
 
             <p>
                 Using generative AI tools, each image was created through prompt engineering that combined emotional tone, regional identifiers, and symbolic imagery. For instance, a Brazilian woman mid-samba, a North Korean soldier, or a Portuguese woman in traditional
-                attire, all presented with puzzled expressions and surrounded by algebraic symbols, serve to universalize the feeling of mental overload in culturally distinctive frames. The prompt construction process was highly iterative, ensuring each
+                attire—all presented with puzzled expressions and surrounded by algebraic symbols—serve to universalize the feeling of mental overload in culturally distinctive frames. The prompt construction process was highly iterative, ensuring each
                 output balanced recognizability, stylistic fidelity, and expressive clarity.
             </p>
 
@@ -61,44 +78,50 @@
             </p>
             <p>
                 In addition, the resulting visuals often fall into caricature or cultural generalization that does not always reflect reality and can sometimes verge on prejudice—most notably in the persistent association of samba with the hypersexualized Black woman,
-                which became a point of concern in our final analysis.
+                which became a point of concern in our final analysisss.
             </p>
         </div>
 
     </div>
 
+    <h2>Image Gallery</h2>
+
     <div class="container-galeria">
-        <h2>Image Gallery</h2>
-        <div class="galeria">
-            <img src="../../imgs/prompts/meme_1.png" alt="" />
-            <img src="../../imgs/prompts/meme_3.png" alt="" />
-            <img src="../../imgs/prompts/meme_2.png" alt="" />
-            <img src="../../imgs/prompts/meme_4.png" alt="" />
-            <img src="../../imgs/prompts/meme_9.png" alt="" />
-            <img src="../../imgs/prompts/meme_10.png" alt="" />
-            <img src="../../imgs/prompts/meme_11.png" alt="" />
-            <img src="../../imgs/prompts/meme_12.png" alt="" />
-            <img src="../../imgs/prompts/meme_13.png" alt="" />
-            <img src="../../imgs/prompts/meme_14.png" alt="" />
-            <img src="../../imgs/prompts/meme_15.png" alt="" />
-            <img src="../../imgs/prompts/meme_16.png" alt="" />
-            <img src="../../imgs/prompts/meme_17.png" alt="" />
-            <img src="../../imgs/prompts/meme_18.png" alt="" />
-            <img src="../../imgs/prompts/meme_19.png" alt="" />
-            <img src="../../imgs/prompts/meme_20.png" alt="" />
-            <img src="../../imgs/prompts/meme_21.png" alt="" />
-            <img src="../../imgs/prompts/meme_22.png" alt="" />
-            <img src="../../imgs/prompts/meme_23.png" alt="" />
-            <img src="../../imgs/prompts/meme_24.png" alt="" />
-            <img src="../../imgs/prompts/meme_25.png" alt="" />
-            <img src="../../imgs/prompts/meme_26.png" alt="" />
-            <img src="../../imgs/prompts/meme_27.png" alt="" />
-            <img src="../../imgs/prompts/meme_28.png" alt="" />
-            <img src="../../imgs/prompts/meme_29.png" alt="" />
-            <img src="../../imgs/prompts/meme_30.png" alt="" />
-            <img src="../../imgs/prompts/meme_31.png" alt="" />
+        
+        <div class="galeria" onclick="imageShow()">
+            <img class="modal-image-source"  src="../../imgs/prompts/meme_1.png" alt="" />
+            <img class="modal-image-source"  src="../../imgs/prompts/meme_3.png" alt="" />
+            <img class="modal-image-source"  src="../../imgs/prompts/meme_2.png" alt="" />
+            <img class="modal-image-source"  src="../../imgs/prompts/meme_4.png" alt="" />
+            <img class="modal-image-source"  src="../../imgs/prompts/meme_9.png" alt="" />
+            <img class="modal-image-source"  src="../../imgs/prompts/meme_10.png" alt="" />
+            <img class="modal-image-source"  src="../../imgs/prompts/meme_11.png" alt="" />
+            <img class="modal-image-source"  src="../../imgs/prompts/meme_12.png" alt="" />
+            <img class="modal-image-source"  src="../../imgs/prompts/meme_13.png" alt="" />
+            <img class="modal-image-source"  src="../../imgs/prompts/meme_14.png" alt="" />
+            <img class="modal-image-source"  src="../../imgs/prompts/meme_15.png" alt="" />
+            <img class="modal-image-source"  src="../../imgs/prompts/meme_16.png" alt="" />
+            <img class="modal-image-source"  src="../../imgs/prompts/meme_17.png" alt="" />
+            <img class="modal-image-source"  src="../../imgs/prompts/meme_18.png" alt="" />
+            <img class="modal-image-source"  src="../../imgs/prompts/meme_19.png" alt="" />
+            <img class="modal-image-source"  src="../../imgs/prompts/meme_20.png" alt="" />
+            <img class="modal-image-source"  src="../../imgs/prompts/meme_21.png" alt="" />
+            <img class="modal-image-source"  src="../../imgs/prompts/meme_22.png" alt="" />
+            <img class="modal-image-source"  src="../../imgs/prompts/meme_23.png" alt="" />
+            <img class="modal-image-source"  src="../../imgs/prompts/meme_24.png" alt="" />
+            <img class="modal-image-source"  src="../../imgs/prompts/meme_25.png" alt="" />
+            <img class="modal-image-source"  src="../../imgs/prompts/meme_26.png" alt="" />
+            <img class="modal-image-source"  src="../../imgs/prompts/meme_27.png" alt="" />
+            <img class="modal-image-source"  src="../../imgs/prompts/meme_28.png" alt="" />
+            <img class="modal-image-source"  src="../../imgs/prompts/meme_29.png" alt="" />
+            <img class="modal-image-source"  src="../../imgs/prompts/meme_30.png" alt="" />
+            <img class="modal-image-source"  src="../../imgs/prompts/meme_31.png" alt="" />
         </div>
+
+
     </div>
+
+
 
 
     <footer>
@@ -108,7 +131,7 @@
     </footer>
 
 
-
+    <script src="../../js/gridGallery.js"></script>
 </body>
 
 </html>
