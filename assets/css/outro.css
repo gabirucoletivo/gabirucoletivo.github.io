@@ -96,25 +96,26 @@ nav {
 
 .legenda-imagem {
     font-size: 1.2rem;
+    margin-top: 3rem;
 }
 
 /* video gallery */
 .vid-container{
-    margin: 1rem;
+    width:100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .vid-grid {
-    width: 80%;
+    width: 70%;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 1rem;
+    gap: 1rem;
+    padding: .5rem;
 }
 .vid-grid video{
     width: 100%;
-     border-radius: 5px;
+    border-radius: 10px;
 }
 
 
@@ -124,16 +125,20 @@ nav {
  flex-direction: column;
  justify-content: center;
  align-items: center;
- padding: 1rem;
- margin: 1rem;
+ margin-top: 3rem;
+ width: 100%;
 
+}
+
+.container-galeria h2{
+    padding-bottom: 3rem;
 }
 
 .galeria {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    row-gap: 1rem;
 }
 
 .sample{
@@ -188,9 +193,7 @@ footer a:hover {
         font-size: 1.5rem;
     }
 
-    .container-galeria{
-        flex-direction: row;
-    }
+
 
     .img-container img {
     width: 60%;
@@ -210,19 +213,38 @@ footer a:hover {
     gap: 2rem;
     }
 
+/* galeria */
+.container-galeria h2{
+    padding-bottom: 3rem;
+}
+
+.galeria {
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1.5rem;
+}
+
+.container-galeria img {
+    width: 25vh;
+    height: 25vh;
+}
+
+.audio-station{
+scale: .85;
+}
 
 
-    .container-galeria {
 
+.container-galeria img:hover {
+    cursor: pointer;
+    opacity: 1;
+    border-radius: 3%;
+    filter: grayscale(0%);
+}
 
-
-        .audio-station{
-        transform: scale(.8);
-    }
-
-    }
 
 }
+
 
 @media(min-width: 767px) {
 
@@ -243,10 +265,25 @@ footer a:hover {
         grid-template-columns: repeat(3, 1fr);
     }
 
-        .container-galeria .galeria img {
-        width: 80%;
-        height: 25vh;
-    }
+/* galeria */
+.container-galeria h2{
+    padding-bottom: 3rem;
+}
+
+.galeria {
+    width: 90%;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 1.5rem;
+}
+
+.container-galeria img {
+    width: 30vh;
+    height: 20vh;
+}
+
+.audio-station{
+scale: .85;
+}
 
 
 
@@ -255,14 +292,21 @@ footer a:hover {
 
 @media(min-width: 1200px) {
 
-        .vid-grid{
-            grid-template-columns: repeat(4, 1fr);
-        }
 
-        .container-galeria .galeria img {
-        width: 75%;
-        height: 40vh;
+    .legenda-imagem {
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+    .vid-grid{
+        grid-template-columns: repeat(4, 1fr);
     }
+
+/* galeria */
+.container-galeria h2{
+    padding-bottom: 4rem;
+}
+
 
 
 }

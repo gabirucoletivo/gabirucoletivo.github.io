@@ -63,8 +63,8 @@ nav {
     margin: 1rem .5rem;
     left:0;
     top:-100%;
-    width: 96%;
-    height: 95%;
+    width: 94%;
+    height: 94%;
     border-radius: 10px;
     overflow: auto;
     background-color: rgba(0,0,0,0.9);
@@ -86,18 +86,18 @@ nav {
 }
 
 .modal-content img{
-    height: 40%;
+    height: 45%;
     border-radius: 5px;
 }
 
 #modal-image-button{
     position: absolute;
-    left: 42vw;
-    bottom: 5rem;
+    left: 1rem;
+    top: 1rem;
     cursor: pointer;
     opacity: .3;
      border-radius: 5px;
-     padding: .5rem;
+     padding: 1rem;
     transform: scale(.9);
     transition: all .5s ease-in-out;
       
@@ -147,8 +147,8 @@ nav {
 /* citation */
 
 .stylish {
-    letter-spacing: 7px;
-    padding: 0 1rem;
+    letter-spacing: .1rem;
+    padding: 0 .1rem;
 
 }
 
@@ -160,30 +160,22 @@ nav {
 }
 .cita h2{
     text-align: justify;
-    letter-spacing: .2rem;
-    font-size: 1rem;;
+    letter-spacing: .12rem;
+    word-break:normal;
+    font-size: 1rem;
+    line-height: 2;
 }
 
 .cita-body{
-        line-height: 1.5;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
 }
 
 .apostrophe {
-    font-size: 4rem;
+    padding: .5rem;
 }
 
-.apostrophe.left {
-
-    margin-bottom: 3rem;
-}
-
-.apostrophe.right{
-     margin-top: 3rem;
-       transform: rotate(180deg);
-}
 
 .container-galeria {
     min-width: 100%;
@@ -247,9 +239,13 @@ footer a:hover {
     /* display: none; */
 
     padding-top: 1rem;
-    margin: 5rem;;
-    width: 85%;
-    height: 80%;
+    margin: 2rem;
+    width: 90%;
+}
+
+#modal-image-button{
+    left: 1rem;
+    top: 1rem; 
 }
 
     .modal-content img{
@@ -261,28 +257,27 @@ footer a:hover {
 
     /* citation */
 
+    .cita{
+        margin: 0 3.5rem;
+    }
+
 .cita h2{
     font-size: 1.4rem;
-    letter-spacing: .26rem;
-    margin: 0 .2rem
+    letter-spacing: .25rem;
+    margin: 0 .2rem;
+    line-height: 2.4;
 }
 
 .stylish{
-    letter-spacing: 8px;
+    letter-spacing: 5px;
 }
 
 .apostrophe {
-    font-size: 6rem;
+    font-size: 1.9rem;
+   padding: 1.5rem;
 }
 
-.apostrophe.left {
 
-    margin-top: .1rem;
-}
-
-.apostrophe.right{
-     margin-bottom: .1rem;
-}
 
 
     .legenda-imagem {
@@ -300,32 +295,40 @@ footer a:hover {
 
 @media(min-width: 767px) {
 
+    .modal{
+    /* display: none; */
+
+    padding-top: 1rem;
+    margin: 2rem;
+    width: 93%;
+}
+
+#modal-image-button{
+    left: 1rem;
+    top: 1rem; 
+}
+
 
     .modal-content img{
     height: 60%;
 }
         /* citation */
 .cita{
- margin: 0 4rem;
+ margin: 0 4.5rem;
+ font-size: 2rem;
+line-height: 2.4;
 }
 
 .cita h2{
-    font-size: 1.8rem;
+    
     letter-spacing: .27rem;
 }
 
 .apostrophe {
-    font-size: 6rem;
+    padding: 2rem;
 }
 
-.apostrophe.left {
 
-    margin-bottom: 2.5rem;
-}
-
-.apostrophe.right{
-     margin-top: 3rem;
-}
 
 
     .galeria {
@@ -342,20 +345,27 @@ footer a:hover {
 .modal{
     /* display: none; */
 
-    padding-top: 1rem;
+    padding-top: .1rem;
     margin: 3rem;
     width: 92%;
     height: 92%;
 }
 
+#modal-image-button{
+    left: 1rem;
+    top: 1rem; 
+}
+
+
         /* citation */
 
     .cita{
-        padding: 0 4.5rem
+        padding: 1.5rem 2.5rem;
+        
     }
 
     .stylish{
-        padding: 0 1rem;
+        padding: 0 .1rem;
     }
 
 .cita h2{
@@ -366,17 +376,10 @@ footer a:hover {
 
 
 .apostrophe {
-    font-size: 6rem;
+padding: 0 2rem;
 }
 
-.apostrophe.left {
 
-    margin-bottom: 3rem;
-}
-
-.apostrophe.right{
-     margin-top: 3rem;
-}
 
     .galeria img {
         height: 30vh;
@@ -394,6 +397,11 @@ footer a:hover {
     height: 96%;
 }
 
+#modal-image-button{
+    left: 1rem;
+    top: 1rem;
+ 
+}
     .img-container {
     width: 100%;
     display: flex;
@@ -415,33 +423,25 @@ footer a:hover {
             /* citation */
 
     .cita{
+        margin: 0 18.5%;
         height: 25vh;
+        
+        
     
     }
 
 .cita h2{
-    letter-spacing: .45rem;
-    font-size: 1.9rem;
+    letter-spacing: .15rem;
+    font-size: 1.8rem;
     margin: 0 .1rem;
     padding: 0 1.5rem;
+    line-height: 2;
 }
 
 .stylish{
-    padding:  0 2rem;
+    padding:  0 .9rem;
 }
 
-.apostrophe {
-    font-size: 8rem;
-}
-
-.apostrophe.left {
-
-    margin-top: 7rem;
-}
-
-.apostrophe.right{
-     margin-bottom: 8rem;
-}
 
         .galeria {
         grid-template-columns: repeat(4, 1fr);

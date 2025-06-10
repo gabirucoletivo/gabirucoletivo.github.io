@@ -24,9 +24,9 @@ nav {
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
-    gap: .5rem;
+    gap: .2rem;
     padding: .5rem;
-    font-size: 1rem;
+    font-size: .9rem;
 }
 
 .nav-item {
@@ -48,8 +48,8 @@ nav {
     align-items: center;
 }
 
-img {
-    width: 50%;
+.image-container img {
+    width: 80%;
     padding: 1rem;
     border-radius: 20px;
 }
@@ -111,8 +111,8 @@ footer a:hover {
         padding: 1rem 3rem;
         font-size: 1.5rem;
     }
-    img {
-        width: 40%;
+    .image-container img {
+        width: 70%;
         padding: 1rem;
         border-radius: 20px;
     }
@@ -126,8 +126,8 @@ footer a:hover {
         padding: 1rem 3rem;
         font-size: 1.5rem;
     }
-    img {
-        width: 30%;
+    .image-container img {
+        width: 35%;
         margin: 0 10%;
         border-radius: 20px;
     }
