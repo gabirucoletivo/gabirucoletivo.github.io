@@ -54,6 +54,20 @@ nav {
     width: 85%;
     border-radius: 10px;
 }
+/* video */
+.container-vid {
+    width: 100%;
+    padding: .1rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container-vid video {
+    width: 85%;
+    border-radius: 10px;
+}
 
 
 .container-residencia {
@@ -107,6 +121,10 @@ footer a:hover {
 .container-image img {
     width: 80%;
 }
+
+.container-vid video {
+    width: 80%;
+}
 }
 
 @media (min-width: 767px) {
@@ -145,6 +163,9 @@ footer a:hover {
     .container-image img {
     width: 55%;
 }
+    .container-vid video {
+    width: 55%;
+}
 }
 
 @media (min-width: 1200px) {
@@ -155,4 +176,9 @@ footer a:hover {
     .container-image img {
     width: 55%;
 }
+
+    .container-vid video {
+    width: 55%;
+}
+
 }
