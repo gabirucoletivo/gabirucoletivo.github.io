@@ -153,6 +153,6 @@ bundles/
 *.mp3
 *.wav
 *.webm
-*.mp4
+# *.mp4
 
 venv
