@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Danfo&family=Exile&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lilita+One&family=Lobster&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Share+Tech&family=WDXL+Lubrifont+TC&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "WDXL Lubrifont TC", sans-serif;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+h1 {
+  margin-top: .5rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-align: center;
+  padding: 1.4rem;
+}
+
+nav {
+  background-color: #f1f1f1;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  gap: 0.2rem;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.nav-item {
+  background-color: none;
+  border: none;
+  padding: 0.3rem 1rem;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-item:hover {
+  background-color: #fff;
+  transform: scale(0.95);
+}
+
+.legenda-imagem{
+    padding: 1.5rem;
+}
+
+.legenda-imagem p {
+    padding: 1rem;
+}
+
+
+footer {
+    font-size: .8rem;
+    letter-spacing: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+footer a {
+    color: #333;
+    text-decoration: none;
+    opacity: .3;
+    transition: all .3s ease-in-out;
+}
+
+footer a:hover {
+    color: #333;
+    text-decoration: none;
+    opacity: 1;
+}
+
+/* mapa - FABIO*/
+.leaflet-popup-content-wrapper {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.leaflet-popup-content {
+  margin: 10px;
+  font-family: Arial, sans-serif;
+  max-width: 300px;
+}
+
+/* Country popup that appears after click*/
+.popup-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+}
+/* country name (pop-up) */
+.popup-country {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #333;
+}
+/* sentimen counter (number) */
+.popup-sentiment {
+  padding: 4px 8px;
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+/*value area (number box area) */
+/* negative value area */
+.sentiment-negative-popup {
+  background: #d73027;
+}
+/* neutral value area */
+.sentiment-neutral-popup {
+  background: #666;
+}
+/* positive value area */
+.sentiment-positive-popup {
+  background: #4575b4;
+}
+/* positive value area */
+.popup-articles {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+
+/* news article (below the sentiment counter) */
+/* news articles below the sentiment counter */
+.popup-article {
+  margin-bottom: 8px;
+  padding: 8px;
+  background: rgba(248, 249, 250, 0.8);
+  border-radius: 6px;
+  border-left: 2px solid #333;
+}
+
+/* news articles: TITLE (*/
+.popup-article-title {
+  font-weight: bold;
+  margin-bottom: 4px;
+  line-height: 1.2;
+  color: #222;
+  font-size: 0.9em;
+}
+/* news articles: meta darta - online source / date (below title) */
+.popup-article-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75em;
+  color: #666;
+}
+
+
+/* THE MAP */
+.map-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 1.5rem;
+    width: 100%;
+
+}
+
+#sentiment-map {
+  height: 90vw;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+@media (min-width: 576px){
+
+        .nav-items {
+        font-size: 1.5rem;
+    }
+
+    .legenda-imagem{
+    padding: .5rem 1.5rem;
+    text-align: justify;
+}
+
+    .map-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 2rem;
+    width: 100%;
+
+}
+#sentiment-map {
+  height: 80vw;
+}
+
+}
+
+
+@media (min-width: 767px){
+
+        .legenda-imagem{
+    padding: 1.5rem 1.5rem;
+    text-align: justify;
+}
+
+    
+    #sentiment-map {
+  height: 66vw;
+  width: 100%;
+  padding: 20%;
+}
+
+}
+
+
+@media (min-width: 992px){
+
+    .legenda-imagem{
+    padding: 1rem 4rem;
+    text-align: justify;
+    font-size: 2rem;
+}
+    .map-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 5rem;
+    width: 100%;
+}
+
+
+    
+#sentiment-map {
+  height: 40vw;
+  width: 100%;
+  padding: 20%;
+}
+
+}
+
+
+@media (min-width: 1200px){
+
+        .legenda-imagem{
+    padding: 1rem 4.5rem;
+    text-align: justify;
+    font-size: 2rem;
+}
+    
+}
