@@ -75,7 +75,7 @@ nav {
 /* image animation */
 
 .altered{
-    animation: color-changes 1s infinite ease-in-out;
+    animation: color-changes 3s infinite ease-in-out;
     animation-direction: alternate; 
 }
 
