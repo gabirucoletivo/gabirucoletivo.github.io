@@ -32,9 +32,9 @@ nav {
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
-    gap: .5rem;
+    gap: .2rem;
     padding: .5rem;
-    font-size: 1rem;
+    font-size: .9rem;
 }
 
 .nav-item {
